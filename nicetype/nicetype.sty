@@ -1,0 +1,83 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{nicetype}[2012/06/13 v1.0 Nice Typography under XeLaTeX]
+
+\newif\ifusezh
+\usezhtrue
+\DeclareOption{nozh}{\usezhfalse}
+\ProcessOptions\relax
+
+% Basic
+\RequirePackage{ifthen}
+\ifusezh
+\RequirePackage[fancyhdr, fntef]{ctexcap}
+\def\CJKunderdotcolor{\color{black}}
+\def\CJKunderdotbasesep{0.5ex}
+\else
+\RequirePackage{fancyhdr}
+\fi
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+% Unicode Math
+\RequirePackage{nicemath}
+
+\RequirePackage{xcolor}
+
+\newcommand{\app}[1]{\textsf{#1}}
+\newcommand{\term}[1]{\textsf{#1}}
+\newcommand{\kwd}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\var}[1]{\emph{#1}}
+\newcommand{\cmd}[1]{\code{\textbackslash #1}}
+
+% Hyperref
+\RequirePackage%
+[colorlinks,
+ pdftitle={\jobname},
+ pdfcreator={LaTeX with NiceType},
+ pdfstartview=FitH]%
+{hyperref}
+
+% Tabulars
+\RequirePackage{tabu}
+\RequirePackage{multirow}
+\RequirePackage{booktabs}
+\DeclareRobustCommand{\tbh}[1]{\textsf{#1}} % TaBle Heading
+\def\titlerow{\rowfont{\sffamily}}
+
+% Fancy Header
+% \RequirePackage{fancyhdr}
+
+% Frame
+\RequirePackage{framed}
+
+% Side Node
+\newcommand{\sidenote}[2][]{%
+\marginpar{%
+\footnotesize
+\ifthenelse{\equal{#1}{}}{}{{\sffamily #1}\par}%
+\CJKfamily{kai}%
+#2
+}%
+}
+
+% Chemistry
+\RequirePackage[version=3]{mhchem}
+
+% Pinyin
+% \def\pinyinfont{\sffamily}
+% \newcommand{\pinyin}[1]{{%
+% \def\a##1{\ifcase ##1\relax ɑ\or \=ɑ\or \'ɑ\or \v{ɑ}\or \`ɑ\fi}%
+% \def\o##1{\ifcase ##1\relax o\or \=o\or \'o\or \v{o}\or \`o\fi}%
+% \def\e##1{\ifcase ##1\relax e\or \=e\or \'e\or \v{e}\or \`e\fi}%
+% \def\i##1{\ifcase ##1\relax i\or \=i\or \'i\or \v{i}\or \`i\fi}%
+% \def\u##1{\ifcase ##1\relax u\or \=u\or \'u\or \v{u}\or \`u\fi}%
+% \def\U##1{\ifcase ##1\relax {\"{u}}\or \={\"{u}}\or \'{\"{u}}\or \v{{\"{u}}}\or \`{\"{u}}\fi}%
+% \def\n##1{\ifcase ##1\relax n\or \=n\or \'n\or \v{n}\or \`n\fi}%
+% \def\m##1{\ifcase ##1\relax m\or \=m\or \'m\or \v{m}\or \`m\fi}%
+% \def\g{ɡ}%
+% \def\E##1{\ifcase ##1\relax {\^{e}}\or \={\^{e}}\or \'{\^{e}}\or \v{{\^{e}}}\or \`{\^{e}}\fi}%
+% \pinyinfont #1}}
+
+\endinput

@@ -1,0 +1,8 @@
+\setCJKfamilyfont{song}{Adobe Song Std}
+\setCJKfamilyfont{hei}{Adobe Heiti Std}
+\setCJKfamilyfont{kai}{Adobe Kaiti Std}
+\setCJKfamilyfont{fs}{Adobe Fangsong Std}
+
+\setCJKmainfont[BoldFont=Adobe Heiti Std, ItalicFont=Adobe Kaiti Std]{Adobe Song Std}
+\setCJKsansfont[AutoFakeBold=false, AutoFakeSlant=true]{Adobe Heiti Std}
+\setCJKmonofont{Adobe Kaiti Std}

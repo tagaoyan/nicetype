@@ -1,0 +1,3 @@
+\setmainfont[Mapping=tex-text]{Latin Modern Roman}
+\setsansfont[Mapping=tex-text]{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}

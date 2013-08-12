@@ -1,0 +1,11 @@
+\setCJKfamilyfont{song}{FZShuSong-Z01}
+\setCJKfamilyfont{hei}{FZHei-B01}
+\setCJKfamilyfont{kai}{FZKai-Z03}
+\setCJKfamilyfont{fs}{FZFangSong-Z02}
+\setCJKfamilyfont{yuan}{FZZhunYuan-M02}
+\setCJKfamilyfont{xbsong}{FZXiaoBiaoSong-B05}
+\setCJKfamilyfont{songh}{FZSongHei-B07}
+
+\setCJKmainfont[BoldFont=FZXiaoBiaoSong-B05, ItalicFont=FZKai-Z03]{FZShuSong-Z01}
+\setCJKsansfont[AutoFakeBold=false, AutoFakeSlant=true]{FZHei-B01}
+\setCJKmonofont{FZSongHei-B07}

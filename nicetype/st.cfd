@@ -1,0 +1,9 @@
+\setCJKfamilyfont{song}{STSong}
+\setCJKfamilyfont{hei}{STXihei}
+\setCJKfamilyfont{kai}{STKaiti}
+\setCJKfamilyfont{fs}{STFangsong}
+\setCJKfamilyfont{xbsong}{STZhongsong}
+
+\setCJKmainfont[BoldFont=STZhongsong, ItalicFont=STKaiti]{STSong}
+\setCJKsansfont[AutoFakeBold=false, AutoFakeSlant=true]{STXihei}
+\setCJKmonofont{STFangsong}

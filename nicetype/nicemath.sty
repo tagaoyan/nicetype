@@ -1,0 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{nicemath}[2012/06/13 v1.0 Nice Mathematics under 
+XeLaTeX]
+
+\RequirePackage{amsmath}
+\RequirePackage[math-style=ISO, bold-style=ISO, sans-style=italic, vargreek-shape=unicode]{unicode-math}
+
+% Vector and Tensor
+\def\vect#1{\mathbfit{#1}}
+\def\Vect#1{\mathbfup{#1}}
+\def\tens#1{\mathsfit{#1}}
+\def\Tens#1{\mathsfup{#1}}
+% PI
+\DeclareRobustCommand*{\PI}{\mathup{\pi}}
+\DeclareRobustCommand*{\ue}{\mathup{e}}
+\DeclareRobustCommand*{\ud}{\mathup{d}}
+\DeclareRobustCommand*{\im}{\mathup{i}}
+\DeclareRobustCommand*{\jm}{\mathup{j}}
+% Slashfrac
+\DeclareRobustCommand{\sfrac}[2]{\left.#1\middle\fracslash#2\right.}
+% Func
+\let\mup\mathup
+\newcommand{\func}[1]{\mathop{\mup{#1}\hspace{0pt}}\nolimits} % Function
+\newcommand{\lunc}[1]{\mathop{\mup{#1}}\limits} % Function
+\newcommand{\rela}[1]{\mathrel{\mup{#1}}} % Relation
+\newcommand{\bina}[1]{\mathbin{\mup{#1}}} % Binary Oper
+\newcommand{\unit}[1]{\:\mup{#1}} % Unit
+\newcommand{\field}[1]{\mathbb{#1}} % Unit
+
+\endinput
